@@ -2,15 +2,141 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+ //   border: 3px dashed red;
+ //   margin: 3px;
   }
-  $szurke: rgb(35, 45, 51);
-  $bgcolor: beige;
+
+  $grey: rgb(35, 45, 51);
+  $bgcolor: rgb(9, 209, 116);
+  $titlecolor:rgb(240, 165, 26);
+  
   body {
     width: 100vw;
     height: 100vh;
     background-color: $bgcolor;
-    color: $szurke;
-    display: flex;
+    color: $grey;
+  
     font-family: 'Montserrat', sans-serif;
   }
+  
+.navbar-dark .navbar-toggler {
+    border-color:$grey
+  }
+  .navbar-toggler-icon {
+    color: $bgcolor;
+    font-size: 1em;
+    font-weight: 600;
+  }
+  #hambi {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    background-color: $grey;
+    border: 1px solid $bgcolor;
+  }
+  
+
+h1{
+    color: white;
+    text-align: center;
+    margin:35px 0 50px;
+}
+
+h2,h4{
+    color:$titlecolor;
+}
+
+.wrapper{
+    display:flex;
+    gap:50px;
+    justify-content: center;
+}
+.left,.middle,.right { 
+    width:25%;
+    position:relative;
+    padding:20px;
+}
+.btn{
+    position: absolute;
+    bottom:-50px;
+    left:0;
+    padding:0;
+    background-color: rgba(0,0,0,0);
+}
+.text{
+    padding:0;
+}
+.left{
+    background-color: black;
+
+    .title_left{
+        color:$titlecolor;
+    }
+}
+
+
+
+.middle{
+    background-color: white; //ezt nem huzza be
+    color:black;
+}
+
+
+
+
+.right{
+    background-color: black;
+    .video{height:80%;
+    width:100%;
+    background-color: blue;}
+}
+
+
+.read_more{
+    color:$titlecolor;
+}
+
+.watch{
+   color: $titlecolor;
+}
+
+
+@media (max-width: 1200px) {
+    .wrapper{
+        flex-direction: column;
+        .left,.middle,.right { 
+            width:100%;
+           
+        }
+    }
+}
+
+
+
+/*  @media (max-width: 800px) {
+    .img {
+      width: 100%;
+      height: calc(50vh - 20px);
+    }
+    .text_wrapper {
+      padding: 30px;
+    }
+    .title {
+      margin: 20px 0;
+  
+    }
+    .container {
+      padding: 0;
+    }
+    .wrapper {
+      flex-direction: column;
+      padding-right: var(--bs-gutter-x, 0.75rem);
+      padding-left: var(--bs-gutter-x, 0.75rem);
+      margin-right: auto;
+      margin-left: auto;
+    }
+}
+   */

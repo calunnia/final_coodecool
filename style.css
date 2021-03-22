@@ -8,11 +8,135 @@
 body {
   width: 100vw;
   height: 100vh;
-  background-color: beige;
+  background-color: #09d174;
   color: #232d33;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-dark .navbar-toggler {
+  border-color: #232d33;
+}
+
+.navbar-toggler-icon {
+  color: #09d174;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+#hambi {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  background-color: #232d33;
+  border: 1px solid #09d174;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  margin: 35px 0 50px;
+}
+
+h2, h4 {
+  color: #f0a51a;
+}
+
+.wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: 'Montserrat', sans-serif;
+  gap: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
+.left, .middle, .right {
+  width: 25%;
+  position: relative;
+  padding: 20px;
+}
+
+.btn {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.text {
+  padding: 0;
+}
+
+.left {
+  background-color: black;
+}
+
+.left .title_left {
+  color: #f0a51a;
+}
+
+.middle {
+  background-color: white;
+  color: black;
+}
+
+.right {
+  background-color: black;
+}
+
+.right .video {
+  height: 80%;
+  width: 100%;
+  background-color: blue;
+}
+
+.read_more {
+  color: #f0a51a;
+}
+
+.watch {
+  color: #f0a51a;
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .wrapper .left, .wrapper .middle, .wrapper .right {
+    width: 100%;
+  }
+}
+
+/*  @media (max-width: 800px) {
+    .img {
+      width: 100%;
+      height: calc(50vh - 20px);
+    }
+    .text_wrapper {
+      padding: 30px;
+    }
+    .title {
+      margin: 20px 0;
+  
+    }
+    .container {
+      padding: 0;
+    }
+    .wrapper {
+      flex-direction: column;
+      padding-right: var(--bs-gutter-x, 0.75rem);
+      padding-left: var(--bs-gutter-x, 0.75rem);
+      margin-right: auto;
+      margin-left: auto;
+    }
+}
+   */
 /*# sourceMappingURL=style.css.map */
